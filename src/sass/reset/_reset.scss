@@ -1,0 +1,131 @@
+:root {
+	/* Colores */
+	--primary-color: #fff;
+	--secunday-color: #1db954;
+
+	--bg-primary-color: rgba(18, 18, 18, 1);
+	--bg-secunday-color: rgba(26, 26, 26, 0.5);
+	--bg-third-color: rgba(34, 34, 34, 0.4);
+
+	/* Tipografía */
+	--tipo-principal: Helvetica, Arial, sans-serif;
+	--tipo-secundaria: Verdana;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	vertical-align: baseline;
+}
+*::before,
+*::after {
+	display: block;
+}
+img,
+picture,
+video,
+iframe,
+figure {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+	object-fit: fill;
+	object-position: center center;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+}
+
+p a {
+	display: inline;
+}
+
+li {
+	list-style-type: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+form,
+input,
+textarea,
+select,
+button,
+label {
+	font-family: inherit;
+	font-size: inherit;
+	hyphens: auto;
+	background-color: transparent;
+	color: inherit;
+	display: block;
+	/* (Opcional) */
+	appearance: none;
+}
+
+table,
+tr,
+td {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+svg {
+	width: 100%;
+	display: block;
+	fill: currentColor;
+}
+
+body {
+	min-height: 100vh;
+	font-size: 100%;
+	font-family: var(--tipo-principal);
+	background-color: var(--bg-primary-color);
+	color: var(--primary-color);
+	/* (Opcional) */
+	hyphens: auto;
+	/* (Opcional) */
+	font-smooth: always;
+	/* (Opcional) */
+	-webkit-font-smoothing: antialiased;
+	/* (Opcional) */
+	-moz-osx-font-smoothing: grayscale;
+}

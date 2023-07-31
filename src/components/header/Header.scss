@@ -1,0 +1,26 @@
+.header {
+	padding: 1em 0.3em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 5em;
+	&__logo {
+		max-width: 6em;
+	}
+	&__form {
+		width: 20em;
+		&-input {
+			padding: 0.2em 0.2em 0.2em 1em;
+			width: 100%;
+			outline: 1px solid rgb(243, 127, 127);
+			border-radius: 0.3em;
+		}
+	}
+	&__input:focus {
+		outline: 1px solid rgb(231, 1, 1);
+	}
+	&__star {
+		max-width: 1.5em;
+	}
+}
