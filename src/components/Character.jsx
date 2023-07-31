@@ -1,4 +1,4 @@
-const Character = ({ id, name, thumbnail }) => {
+const Character = ({ name, thumbnail }) => {
 	return (
 		<li className='characters__character'>
 			<img

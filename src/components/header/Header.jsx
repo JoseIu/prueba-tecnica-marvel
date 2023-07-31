@@ -1,7 +1,12 @@
 import useCharacters from '../../hooks/useCharacters';
 import './Header.scss';
 const Header = () => {
-	const { searchCharter } = useCharacters();
+	const { searchCharter, search, setSearch } = useCharacters();
+
+	const handleSearch = (e) => {
+		e.preventDefault();
+		searchCharter(search);
+	};
 
 	return (
 		<header className='header wrapper'>
@@ -11,14 +16,15 @@ const Header = () => {
 				alt=''
 			/>
 
-			<form
-				className='header__form'
-				onSubmit={(e) => {
-					e.preventDefault();
-					searchCharter(e.target.search.value);
-				}}
-			>
-				<input className='header__form-input' type='text' name='search' id='' />
+			<form className='header__form' onSubmit={handleSearch}>
+				<input
+					className='header__form-input'
+					type='text'
+					name='search'
+					id=''
+					value={search}
+					onChange={(e) => setSearch(e.target.value)}
+				/>
 			</form>
 
 			<svg

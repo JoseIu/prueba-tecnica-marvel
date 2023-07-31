@@ -13,11 +13,9 @@ export const CharactersProvider = ({ children }) => {
 		setCharacters(results);
 	};
 	const searchCharter = async (searchs) => {
-		setSearch(searchs);
-		const datas = await conectAPI(search);
+		const datas = await conectAPI(searchs);
 		const { results } = datas.data;
 		setCharacters(results);
-		console.log(search);
 	};
 
 	useEffect(() => {
@@ -26,7 +24,7 @@ export const CharactersProvider = ({ children }) => {
 
 	return (
 		<CharactersContext.Provider
-			value={{ characters, searchCharter, setSearch }}
+			value={{ characters, searchCharter, search, setSearch }}
 		>
 			{children}
 		</CharactersContext.Provider>
